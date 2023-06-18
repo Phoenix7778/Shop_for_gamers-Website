@@ -1,0 +1,227 @@
+// Цей файл використовується для об'єднання (підключення) всіх інших файлів зі стилями Вашої частини проєкту
+.header {
+  position: relative;
+  // padding: 24px 0;
+  z-index: 10;
+  background: $teal-text-color;
+  box-shadow: 0px 4px 10px rgba(97, 162, 58, 0.2),
+    0px 4px 50px rgba(94, 236, 54, 0.5), 0px 4px 4px rgba(17, 168, 26, 0.2);
+
+  // @media screen and (min-width: $tablet-min) {
+  //   padding: 40px 0;
+  // }
+}
+
+.header__overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 115px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-text-color;
+  padding: 24px 0;
+
+  @media screen and (min-width: $tablet-min) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 121px;
+  }
+
+  //Градієнт
+  background: linear-gradient(to right, crimson, pink, springgreen);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: rgba(0, 0, 0, 0);
+  }
+  @keyframes rainbow {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+}
+
+.header__nav {
+  @media screen and (max-width: $tablet-max) {
+    display: none;
+  }
+}
+
+.header__list {
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+  }
+}
+
+.header__item:not(:last-child) {
+  margin-right: 48px;
+}
+
+.header__item {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.header__link {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  color: $white-text-color;
+  &::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $green-text-color;
+    left: 0;
+    bottom: -8px;
+    transform: scale(0);
+    transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &:hover::after {
+    transform: scale(1);
+  }
+}
+
+.header__button {
+  color: $dark-text-color;
+}
+
+.button--header {
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $desktop-min) {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+  flex-direction: column;
+  overflow-y: scroll;
+  margin-top: 88px;
+  margin-bottom: 88px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  transform: translateY(-100%);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-image: url(/src/images/img-bg-menu/bg-menu-mobile.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(/src/images/img-bg-menu/bg-menu-mobile-2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    padding-top: 140px;
+
+    background-image: url(/src/images/img-bg-menu/bg-menu-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/img-bg-menu/bg-menu-tablet-2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+  display: block;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-open {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu__list {
+  text-align: center;
+  padding-top: 64px;
+
+  @media screen and (min-width: $tablet-min) {
+    padding-top: 120px;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.menu__link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $white-text-color;
+  transition: border-bottom 250ms linear;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $green-text-color;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

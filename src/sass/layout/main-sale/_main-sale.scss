@@ -1,0 +1,137 @@
+.main-sale {
+  padding-top: 0;
+  @media screen and (min-width: $desktop-min) {
+    background-image: url(../images/img-bg/bg1-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.container-sale {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.main-sale__title {
+  margin-bottom: 0;
+
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.18;
+    margin-bottom: 0;
+    margin-left: 63px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: 102px;
+  }
+}
+
+.sale-menu {
+  margin-top: calc(24px + 7px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+  justify-content: space-around;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    margin-bottom: 28px;
+  }
+  @include desktop {
+    margin-top: calc(16px + 19px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.sale-menu__item:nth-child(odd) {
+  @media screen and (max-width: $mobile-max) {
+    flex-basis: 285px;
+  }
+}
+
+.sale-menu__item:nth-child(even) {
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.sale-menu__item {
+  @include tablet {
+    flex-basis: calc((100% - 38px) / 2);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 80px) / 4);
+  }
+}
+
+.sale-menu__link {
+  display: block;
+  border-radius: 10px;
+  transition: $transition-shadow;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+      0px 4px 10px rgba(134, 229, 67, 0.1);
+  }
+}
+
+.sale-menu__img {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  @include tablet {
+    width: 285px;
+  }
+}
+
+.wrap-content {
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+
+.wrap-content__title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.18;
+  max-width: 261px;
+  margin-bottom: 8px;
+
+  color: $green-text-color;
+}
+
+.box-prices {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.box-prices__old-price {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration-line: line-through;
+
+  color: $grey-text-color;
+}
+
+.box-prices__new-price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: $green-text-color;
+}
+
+.btn-sale {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,21 @@
+@mixin tablet {
+  @media screen and (min-width: $tablet-min) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop-min) {
+    @content;
+  }
+}
+
+// ЗМІНА ШРИФТІВ НА ЗЛАМІ
+// value - min-width / max-width
+// window-size - mobile, tablet, desktop
+// font-size прописувати без px
+@mixin media-fs($value, $window-size, $font-size, $line-height) {
+  @media screen and ($value: $window-size) {
+    font-size: $font-size + px;
+    line-height: $line-height;
+  }
+}

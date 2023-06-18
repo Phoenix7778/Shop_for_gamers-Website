@@ -1,0 +1,253 @@
+// Цей файл використовується для об'єднання (підключення) всіх інших файлів зі стилями Вашої частини проєкту
+// бордерами и тенями
+.line-broken {
+  position: relative;
+  margin-left: $line-margin-sale-mobile;
+  margin-right: $line-margin-sale-mobile;
+  width: calc(100% - (2 * $line-margin-sale-mobile));
+  display: flex;
+
+  @include tablet {
+    margin-left: $line-margin-sale-desktop;
+    margin-right: $line-margin-sale-desktop;
+    width: calc(100% - (2 * $line-margin-sale-desktop));
+  }
+  &__first-relative {
+    margin-top: calc($line-height-mobile - 1px);
+    width: $line-distance-sale-mobile;
+    height: 0;
+    border-bottom: 1px solid #7be34a;
+    box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
+    @include tablet {
+      width: $line-distance-sale-tablet;
+      margin-top: calc($line-height-tablet - 1px);
+    }
+    &--acc {
+      width: $line-distance-acc-mobile;
+      @include tablet {
+        width: $line-distance-acc-tablet;
+      }
+    }
+    &--order {
+      width: $line-distance-order-mobile;
+      @include tablet {
+        width: $line-distance-order-tablet;
+      }
+    }
+    &--cont {
+      width: $line-distance-cont-mobile;
+      @include tablet {
+        width: $line-distance-cont-tablet;
+      }
+    }
+    &--blog {
+      width: $line-distance-blog-mobile;
+      @include tablet {
+        width: $line-distance-blog-tablet;
+      }
+    }
+    &--blog-titles {
+      width: $line-distance-blog-titles-mobile;
+      @include tablet {
+        width: $line-distance-blog-titles-tablet;
+      }
+      @include desktop {
+        width: $line-distance-blog-titles-desktop;
+      }
+    }
+  }
+  &__second-relative {
+    width: 0;
+    height: $line-height-mobile;
+    border-left: 1px solid #7be34a;
+    box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
+    @include tablet {
+      height: $line-height-tablet;
+    }
+  }
+  &__third-relative {
+    margin-top: 0;
+    width: calc(100% - $line-distance-sale-mobile);
+    height: 0px;
+    border-top: 1px solid #7be34a;
+    box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
+    @include tablet {
+      width: calc(100% - $line-distance-sale-tablet);
+    }
+    &--acc {
+      width: calc(100% - $line-distance-acc-mobile);
+      @include tablet {
+        width: calc(100% - $line-distance-acc-tablet);
+      }
+    }
+    &--order {
+      width: calc(100% - $line-distance-order-mobile);
+      @include tablet {
+        width: calc(100% - $line-distance-order-tablet);
+      }
+    }
+    &--cont {
+      width: calc(100% - $line-distance-cont-mobile);
+      @include tablet {
+        width: calc(100% - $line-distance-cont-tablet);
+      }
+    }
+    &--blog {
+      width: calc(100% - $line-distance-blog-mobile);
+      @include tablet {
+        width: calc(100% - $line-distance-blog-tablet);
+      }
+    }
+    &--blog-titles {
+      width: calc(100% - $line-distance-blog-titles-mobile);
+      @include tablet {
+        width: calc(100% - $line-distance-blog-titles-tablet);
+      }
+      @include desktop {
+        width: calc(100% - $line-distance-blog-titles-desktop);
+      }
+    }
+  }
+  &__second-line {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 4px);
+    display: flex;
+    @include tablet {
+      width: calc(100% - 8px);
+      top: 8px;
+      left: 8px;
+    }
+  }
+  &__first-absolut {
+    margin-top: calc($line-height-mobile - 1px);
+    margin-left: -4px;
+    width: calc($line-distance-sale-mobile + 4px);
+    height: 0;
+    border-bottom: 1px solid #28780d;
+    box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
+    @include tablet {
+      margin-left: -8px;
+      width: calc($line-distance-sale-tablet + 8px);
+      margin-top: calc($line-height-tablet - 1px);
+    }
+    &--acc {
+      width: calc($line-distance-acc-mobile + 4px);
+      @include tablet {
+        width: calc($line-distance-acc-tablet + 8px);
+      }
+    }
+    &--order {
+      width: calc($line-distance-order-mobile + 4px);
+      @include tablet {
+        width: calc($line-distance-order-tablet + 8px);
+      }
+    }
+    &--cont {
+      width: calc($line-distance-cont-mobile + 4px);
+      @include tablet {
+        width: calc($line-distance-cont-tablet + 8px);
+      }
+    }
+    &--blog {
+      width: calc($line-distance-blog-mobile + 4px);
+      @include tablet {
+        width: calc($line-distance-blog-tablet + 8px);
+      }
+    }
+    &--blog-titles {
+      width: calc($line-distance-blog-titles-mobile + 4px);
+      @include tablet {
+        width: calc($line-distance-blog-titles-tablet + 8px);
+      }
+      @include desktop {
+        width: calc($line-distance-blog-titles-desktop + 8px);
+      }
+    }
+  }
+  &__second-absolut {
+    width: 0;
+    height: $line-height-mobile;
+    border-left: 1px solid #28780d;
+    box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
+    @include tablet {
+      height: $line-height-tablet;
+    }
+  }
+  &__third-absolut {
+    margin-top: 0;
+    width: calc(100% - ($line-distance-sale-mobile + 1px));
+    height: 0px;
+    border-top: 1px solid #28780d;
+    box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
+    @include tablet {
+      width: calc(100% - ($line-distance-sale-tablet + 1px));
+    }
+    &--acc {
+      width: calc(100% - ($line-distance-acc-mobile + 1px));
+      @include tablet {
+        width: calc(100% - ($line-distance-acc-tablet + 1px));
+      }
+    }
+    &--order {
+      width: calc(100% - ($line-distance-order-mobile + 1px));
+      @include tablet {
+        width: calc(100% - ($line-distance-order-tablet + 1px));
+      }
+    }
+    &--cont {
+      width: calc(100% - ($line-distance-cont-mobile + 1px));
+      @include tablet {
+        width: calc(100% - ($line-distance-cont-tablet + 1px));
+      }
+    }
+    &--blog {
+      width: calc(100% - ($line-distance-blog-mobile + 1px));
+      @include tablet {
+        width: calc(100% - ($line-distance-blog-tablet + 1px));
+      }
+    }
+    &--blog-titles {
+      width: calc(100% - ($line-distance-blog-titles-mobile + 1px));
+      @include tablet {
+        width: calc(100% - ($line-distance-blog-titles-tablet + 1px));
+      }
+      @include desktop {
+        width: calc(100% - ($line-distance-blog-titles-desktop + 1px));
+      }
+    }
+  }
+}
+.line-sale {
+  @include tablet {
+    margin-left: $line-margin-sale-tablet;
+    margin-right: $line-margin-sale-tablet;
+    width: calc(100% - (2 * $line-margin-sale-tablet));
+  }
+  @include desktop {
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% - (2 * -40px));
+  }
+}
+.line-broken--cont {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  @include tablet {
+    margin-left: $line-margin-sale-desktop;
+    margin-right: $line-margin-sale-desktop;
+    width: calc(100% - (2 * $line-margin-sale-desktop));
+  }
+}
+.line-broken--guide {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  @include tablet {
+    margin-left: $line-margin-sale-desktop;
+    margin-right: $line-margin-sale-desktop;
+    width: calc(100% - (2 * $line-margin-sale-desktop));
+  }
+}

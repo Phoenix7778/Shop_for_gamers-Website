@@ -1,0 +1,521 @@
+// Цей файл використовується для об'єднання (підключення) всіх інших файлів зі стилями Вашої частини проєкту
+.order-section {
+  @media screen and (min-width: $desktop-min) {
+    background-image: url(../images/img-bg/bg1-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.order-title {
+  font-size: 24px;
+  line-height: 1.17;
+  // margin-bottom: 35px;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 56px;
+    line-height: 1.18;
+    // margin-bottom: 51px;
+    margin-left: 99px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    line-height: 1.18;
+    margin-left: calc(142px - 40px);
+    // margin-bottom: 75px;
+  }
+}
+
+.order-box {
+  margin-top: 24px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: $tablet-min) {
+    margin-bottom: 48px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-top: 48px;
+  }
+}
+
+.order-subtitle {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.19;
+
+  @media screen and (min-width: $tablet-min) {
+    margin-bottom: 24px;
+    font-size: 56px;
+    line-height: 1.19;
+    width: 690px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    // margin-bottom: 32px;
+    // width: inherit;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+  }
+}
+
+.order-main_img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 288px;
+  height: 254px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet-min) {
+    width: 387px;
+    height: 346px;
+    margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    outline: 1px soli red;
+    width: 387px;
+    height: 346px;
+    margin: 0;
+  }
+}
+
+.order_img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height: 62px;
+  border-radius: 12px;
+
+  @media screen and (min-width: $tablet-min) {
+    width: 154px;
+    height: 160px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 155px;
+  }
+}
+
+.order-price-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration-line: line-through;
+
+  color: $grey-text-color;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 24px;
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-bottom: 0px;
+  }
+}
+
+.order-price-text__active {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  color: $green-text-color;
+  margin-left: 60px;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 48px;
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-left: 65px;
+  }
+}
+
+.product-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet-min) {
+    gap: 24px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-top: 40px;
+  }
+}
+
+.order-price__box {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    margin-left: 24px;
+    margin-top: 32px;
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.order-form__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  margin-bottom: 16px;
+
+  color: $green-text-color;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+}
+
+.order_form {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet-min) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.order_label {
+  position: absolute;
+  line-height: 1.25;
+  transition: transform 250ms linear;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.order_label-accent {
+  line-height: 1.25;
+  color: #cdcdcd;
+
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.order_form-field {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.order_form-field-comment {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $tablet-max) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-left: 20px;
+  }
+}
+
+.order_label-accent {
+  margin-bottom: 4px;
+}
+
+.order_input {
+  position: relative;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid $green-text-color;
+  color: $white-text-color;
+  outline: transparent;
+
+  @media screen and (min-width: $desktop-min) {
+    width: 590px;
+  }
+}
+
+.order_input:focus + .order_label {
+  transform: translateY(-100%);
+}
+
+.order_input:not(:placeholder-shown) + .order_label {
+  transform: translateY(-100%);
+}
+
+.order_comment {
+  background-color: inherit;
+  height: 95px;
+  border: 1px solid $green-text-color;
+  border-radius: 0px;
+  color: $white-text-color;
+  padding: 15px;
+  cursor: pointer;
+  outline: transparent;
+
+  @media screen and (min-width: $tablet-min) {
+    height: 256px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 589.49px;
+  }
+}
+
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 174px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 24px;
+
+  @media screen and (min-width: $tablet-min) {
+    width: 306px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 48px;
+  }
+}
+
+.order-box-tablet {
+  @media screen and (min-width: $tablet-min) {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    display: block;
+  }
+}
+
+.order-box-tablet-wrap {
+  @media screen and (min-width: $desktop-min) {
+    display: none;
+  }
+}
+
+.order-box-desktop-wrap {
+  @media screen and (max-width: $tablet-max) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+}
+
+.order-form__option {
+  &:checked,
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background: #17573d;
+  }
+}
+
+.order-form__select.no-margin {
+  @media screen and (min-width: $desktop-min) {
+    margin-bottom: 0;
+  }
+}
+
+.order-form__select {
+  width: 590px;
+  border: none;
+  border-bottom: 1px solid #86e543;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  appearance: none;
+  margin-bottom: 44px;
+  cursor: pointer;
+  background: none;
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
+.order-form__select {
+  background-image: url(../images/polygon.png);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.order-form__select:focus-within {
+  background-image: url(../images/polygon-up.png);
+}
+
+//Форма
+.select {
+  position: relative;
+  display: block;
+
+  // width: 590px;
+  border: none;
+  border-bottom: 1px solid #86e543;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  appearance: none;
+  margin-bottom: 40px;
+  cursor: pointer;
+  background: none;
+  @media screen and (min-width: $tablet-min) {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.select__head {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.11;
+
+  padding-bottom: 6px;
+
+  cursor: pointer;
+}
+
+.select__head::after {
+  width: 18px;
+  height: 13px;
+
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  content: url(../images/polygon.png);
+  display: block;
+  transition: 0.2s ease-in;
+}
+
+.select__head.open::after {
+  transform: rotate(180deg);
+}
+
+.select__list {
+  display: none;
+  padding-top: 8px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #01383a;
+  border-top: 1px solid #86e543;
+
+  // margin-top: 5px;
+  max-height: 205px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 100;
+  // margin: 0;
+  // padding: 0;
+  font-size: 14px;
+
+  scrollbar-color: dark;
+  scrollbar-width: thin;
+  overscroll-behavior: contain;
+}
+
+.select__list::-webkit-scrollbar {
+  width: 7px;
+
+  padding: 5px;
+}
+
+.select__list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.select__list .select__item {
+  position: relative;
+  font-size: 18px;
+  line-height: 1.11;
+
+  margin-bottom: 4px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.select__list .select__item:hover,
+.select__list .select__item:focus {
+  background-color: #17573d;
+}
+
+.order-form__desktop {
+  display: flex;
+  justify-content: center;
+}
+
+.order-form-flex {
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.order-form-block {
+  @media screen and (min-width: $desktop-min) {
+    display: block;
+  }
+}
